@@ -1,4 +1,5 @@
 const works = require('./works.json');
+const allworks = require('./allworks.json');
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -11,5 +12,8 @@ app.get('/', (req, res)=> {
 })
 app.get('/works', (req, res)=> {
     res.send(works)
+})
+app.get('/allworks', (req, res)=> {
+    res.send(allworks)
 })
 app.listen(port)
